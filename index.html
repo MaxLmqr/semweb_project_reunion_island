@@ -34,8 +34,9 @@
                     <div id="mapid">
                         <script>
                             var mymap = L.map('mapid').setView([-21.117819, 55.521077], 10);
+                            
                             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-                                maxZoom: 18,
+                                //maxZoom: 18,
                                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
                                 '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
                                 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -43,8 +44,19 @@
                                 tileSize: 512,
                                 zoomOffset: -1
                             }).addTo(mymap);
+                            /*
                             var geojsonLayer = new L.GeoJSON.AJAX("communes-millesimeespublic.geojson");       
-                            geojsonLayer.addTo(mymap);
+                            geojsonLayer.addTo(mymap);*/
+
+                            mymap.dragging.disable();
+                            mymap.touchZoom.disable();
+                            mymap.doubleClickZoom.disable();
+                            mymap.scrollWheelZoom.disable();
+                            mymap.boxZoom.disable();
+                            mymap.keyboard.disable();
+                            /*if (mymap.tap) mymap.tap.disable();
+                            document.getElementById('mapid').style.cursor='default';*/
+
                         </script>
                     </div>
                 </div>
@@ -54,7 +66,7 @@
                     
                         
                     <div id="menu" style="height: 550px; overflow:auto;  ">
-                        <p id="label"><h1>What are you looking for ?</h1></p>
+                        <p id="label"><h1>Que recherche tu ?</h1></p>
                         <p>
                             <input type="checkbox" id="test1" />
                             <label for="test1" aria-describedby="label">Tourisme</label>
