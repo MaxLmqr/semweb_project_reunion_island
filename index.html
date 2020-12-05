@@ -44,9 +44,9 @@
                                 tileSize: 512,
                                 zoomOffset: -1
                             }).addTo(mymap);
-                            /*
+                            
                             var geojsonLayer = new L.GeoJSON.AJAX("communes-millesimeespublic.geojson");       
-                            geojsonLayer.addTo(mymap);*/
+                            geojsonLayer.addTo(mymap);
 
                             mymap.dragging.disable();
                             mymap.touchZoom.disable();
@@ -56,6 +56,9 @@
                             mymap.keyboard.disable();
                             /*if (mymap.tap) mymap.tap.disable();
                             document.getElementById('mapid').style.cursor='default';*/
+							geojsonLayer.on("click", function (event) { // Assuming the clicked feature is a shape, not a point marker.
+							mymap.fitBounds(event.layer.getBounds());
+							});
 
                         </script>
                     </div>
