@@ -8,24 +8,81 @@
 
         <!-- Javascript -->
 		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+        <!-- en-tête -->
+        <title>Reunion Island</title>
+        <meta charset="utf-8"/>
+        
+        <!-- police -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet"> 
+
 	</head>
 	<body>
-		<div id="mapid"></div>
+        
+        <div class = "wave-container">
+            <br/><t2>Reunion Island</t2><br/>
+            <t1>by Max and Thomas</t1>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319"><path fill="#fff" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,192C384,192,480,160,576,133.3C672,107,768,85,864,106.7C960,128,1056,192,1152,197.3C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+		</div>
+        <div class = "page">
+            <div class = "section">
+                <div class = "sec-gauche" id = "forma-gauche">
+                    <!--<h1>Carte intéractive</h1>-->
+                    <div id="mapid"></div>
+                    <script>
 
-        <script>
+                    var mymap = L.map('mapid').setView([-21.117819, 55.521077], 10);
 
-var mymap = L.map('mapid').setView([-21.117819, 55.521077], 10);
+                    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                        maxZoom: 18,
+                        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                        id: 'mapbox/streets-v11',
+                        tileSize: 512,
+                        zoomOffset: -1
+                    }).addTo(mymap);
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-    maxZoom: 18,
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1
-}).addTo(mymap);
+                    </script>
 
-</script>
-	</body>
+                    </div>
+      
+
+                <div class = "sec-droite">
+                    
+                        
+                    <div id="menu" style="height: 550px; overflow:auto;  ">
+                        <p id="label"><h1>What are you looking for ?</h1></p>
+                        <p>
+                            <input type="checkbox" id="test1" />
+                            <label for="test1" aria-describedby="label">Tourisme</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test2"  />
+                            <label for="test2" aria-describedby="label">Santé</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test3" " />
+                            <label for="test3" aria-describedby="label">Transport</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="test4" " />
+                            <label for="test4" aria-describedby="label">Education</label>
+                        </p>
+
+                    
+
+                </div>
+            </div>
+            <div class = "bottom">
+                <br/>
+                <h2>Contactez nous !</h2>
+                <a target="_blank" href="https://www.linkedin.com/in/max-lemasquerier-a70a31175/">Max le boss</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://www.linkedin.com/in/thomas-de-lard/31175/">Thomas</a><br/><br/>
+            </div>
+
+        </div>
+
+    </body>     
 </html>
