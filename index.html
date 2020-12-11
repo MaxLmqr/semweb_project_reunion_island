@@ -98,18 +98,31 @@
 		mymap.fitBounds(event.layer.getBounds());
 		mymap.setView([-21.117819, 55.521077], 10);
 		});
-		var tourisme = document.getElementById("tourisme")
-		tourisme.click(function () {
+
+		$('input[type="checkbox"]').each(function(){
+  			$(this).prop('checked', false);
+  		});
+		var markers = new Array();
+		$("#tourisme").on('click',function () {
+			$(this).toggleClass("checked")
 			queryTourismeUrl="http://localhost:3030/test/sparql?query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+tm%3A+%3Chttp%3A%2F%2Fwww.thomasandmax.com%2F%3E%0A%0A%0ASELECT+%3Frandonnee+%3Flong+%3Flat%0AWHERE+%7B%0A++%3Frandonnee+rdf%3Atype+%3Chttp%3A%2F%2Fwww.thomasandmax.com%2FRandonnee%3E.%0A++%3Frandonnee+%3Chttp%3A%2F%2Fwww.thomasandmax.com%2Flong%3E+%3Flong.%0A++%3Frandonnee+%3Chttp%3A%2F%2Fwww.thomasandmax.com%2Flat%3E+%3Flat.%0A++FILTER+(%3Flong!%3D%220%22)%0A%0A++%0A%0A%7D%0ALIMIT+25&format=json"
 			$.ajax({url:queryTourismeUrl,success: function(result) {
-				console.log(result['results']['bindings'])
-				result['results']['bindings'].forEach(element => {
-					var marker = L.marker([element['lat']['value'],element['long']['value']]).addTo(mymap);
-					var name = element['randonnee']['value'];
-					marker.bindPopup(name.substring(name.lastIndexOf('/')+1).replaceAll("_"," ")).openPopup();
-					mymap.closePopup();
-				})
+				if ($("#tourisme").hasClass("checked")) {
+					result['results']['bindings'].forEach(element => {
+						var marker = L.marker([element['lat']['value'],element['long']['value']]).addTo(mymap);
+						markers.push(marker)
+						var name = element['randonnee']['value'];
+						marker.bindPopup(name.substring(name.lastIndexOf('/')+1).replaceAll("_"," ")).openPopup();
+						mymap.closePopup();
+					})
+				} else {
+					for (let i=0;i<markers.length;i++) {
+						mymap.removeLayer(markers[i])
+					}
+					markers = []
+				}
 			}})
+		console.log(markers)
 		})
 	</script>
     </body>     
