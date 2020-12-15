@@ -47,7 +47,6 @@ $( document ).ready(function() {
                     marker.bindPopup("<b>"+name.substring(name.lastIndexOf('/')+1).replaceAll("_"," ")+"</b>"+newline+"Duree (min) : "+duree+newline+"Distance (km) : "+distance+newline+"Dénivelé (m) : "+denivele).openPopup();
                     mymap.closePopup();
                 })
-                mymap.setView([-21.117819, 55.521077], 10);
             } else {
                 for (let i=0;i<tourismeMarkers.length;i++) {
                     mymap.removeLayer(tourismeMarkers[i])
@@ -81,7 +80,6 @@ $( document ).ready(function() {
                     marker.bindPopup("<b>"+name.substring(name.lastIndexOf('/')+1).replaceAll("_"," ")+"</b><br/>"+adresse+"<br />"+cat).openPopup();
                     mymap.closePopup();
                 })
-                mymap.setView([-21.117819, 55.521077], 10);	
             } else {
                 for (let i=0;i<santeMarkers.length;i++) {
                     mymap.removeLayer(santeMarkers[i])
@@ -122,7 +120,6 @@ $( document ).ready(function() {
                     marker.bindPopup("<b>"+name.substring(name.lastIndexOf('/')+1).replaceAll("_"," ")+"</b>").openPopup();
                     mymap.closePopup();
                 })
-                mymap.setView([-21.117819, 55.521077], 10);	
             } else {
                 for (let i=0;i<transportMarkers.length;i++) {
                     mymap.removeLayer(transportMarkers[i])
@@ -147,7 +144,6 @@ $( document ).ready(function() {
                     marker.bindPopup("<b>"+name.substring(name.lastIndexOf('/')+1).replaceAll("_"," ")+"</b><br />"+accessibilite).openPopup();
                     mymap.closePopup();
                 })
-                mymap.setView([-21.117819, 55.521077], 10);	
             } else {
                 for (let i=0;i<remarquablePlace.length;i++) {
                     mymap.removeLayer(remarquablePlace[i])

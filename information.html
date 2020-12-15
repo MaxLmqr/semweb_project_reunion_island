@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations</title>
+</head>
+<body>
+
+
+    <h1>Randonnées</h1>
+    <p>Pour ajouter des données correspondants à des randonnées, vous devez posséder les informations suivantes :</p>
+    <ul>
+        <li>Nom de la randonnée</li>
+        <li>Durée de la randonnée, en minutes</li>
+        <li>Distance de la randonnée, en km</li>
+        <li>Dénivelé de la randonnée</li>
+        <li>Coordonnées GPS du point de départ (latitude et longitude)</li>
+    </ul>
+    <p>En effet, notre triplestore contient ces informations,
+        et pour chaque randonnée nous créons un marqueur qui indique le point de départ de la randonnée avec les informations
+        précisée ci-dessus.
+    </p>
+
+
+    <h1>Lieux remarquables</h1>
+    <p>Pour ajouter des données correspondants à des lieux remarquables, vous devez posséder les informations suivantes :</p>
+    <ul>
+        <li>Nom du lieu remarquable</li>
+        <li>L'existence d'une accessibilité pour les personnes à mobilité réduite (avec 'Oui' ou 'Non')</li>
+        <li>Coordonnées GPS du lieu (latitude et longitude)</li>
+    </ul>
+
+
+    <h1>Santé</h1>
+    <p>Pour ajouter des données correspondants à des établissements de santé, l'établissement doit appartenir à une des catégories suivantes :</p>
+    <ul>
+        <li>Laboratoires de biologie médicale</li>
+        <li>Etablissements d'Hebergement pour Personnes Âgees</li>
+        <li>Centres Hospitaliers</li>
+    </ul>
+    <p>Les informations doivent donc contenir la catégorie à laquelle il appartient, ainsi que les informations suivantes :</p>
+    <ul>
+        <li>Nom de l'établissement</li>
+        <li>Adresse de l'établissement</li>
+        <li>Coordonnées GPS de l'établissement.</li>
+    </ul>
+    <p>Exemple RDFa pour décrire une donnée ????? :</p>
+    <div xmlns:tm="http://www.thomasandmax.com/">
+        <span property="rdf:type">Centres_Hospitaliers</span>
+        <span property="tm:long">55.713527</span>
+        <span property="tm:lat">-21.035898</span>
+        <span property="tm:aAdresse">2 R MONTFLEURY</span>
+    </div>
+
+
+    <h1>Transports</h1>
+    <p>La catégorie transports corresponds aux arrêts bus à la Réunion. Il n'y a en effet pas pour le moment de 
+        réseau ferroviaire, ou de métro. Les données sont donc des arrêts bus, qui nécessitent les informations suivantes :
+    </p>
+    <ul>
+        <li>Nom de l'arrêt'</li>
+        <li>Coordonnées GPS de celui-ci (latitude et longitude)</li>
+    </ul>
+</body>
+</html>
