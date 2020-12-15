@@ -33,7 +33,7 @@ $( document ).ready(function() {
     var tourismeMarkers = new Array();
     $("#tourisme").on('click',function () {
         $(this).toggleClass("checked")
-        queryTourismeUrl="http://localhost:3030/test/sparql?query=%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX+tm%3A+%3Chttp%3A%2F%2Fwww.thomasandmax.com%2F%3E%0A%0A%0ASELECT+%3Frandonnee+(SAMPLE+(%3Flongitude)+as+%3Flong)+(SAMPLE+(%3Flatitude)+as+%3Flat)+(SAMPLE+(%3Fd)+as+%3Fduree)+(SAMPLE+(%3Fdi)+as+%3Fdistance)+(SAMPLE+(%3Fdev)+AS+%3Fdenivele)%0AWHERE+%7B%0A++%3Frandonnee+rdf%3Atype+tm%3ARandonnee+.%0A++%3Frandonnee+tm%3Along+%3Flongitude+.%0A++%3Frandonnee+tm%3Alat+%3Flatitude+.%0A++%3Frandonnee+tm%3Aduree+%3Fd+.%0A++%3Frandonnee+tm%3Adistance+%3Fdi+.%0A++%3Frandonnee+tm%3Adenivele+%3Fdev+.%0A++FILTER+(%3Flongitude!%3D%220%22)%0A%7D%0AGROUP+BY+%3Frandonnee&format=json"
+        queryTourismeUrl="http://localhost:3030/reunion_island/sparql?query=%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX+tm%3A+%3Chttp%3A%2F%2Fwww.thomasandmax.com%2F%3E%0A%0A%0ASELECT+%3Frandonnee+(SAMPLE+(%3Flongitude)+as+%3Flong)+(SAMPLE+(%3Flatitude)+as+%3Flat)+(SAMPLE+(%3Fd)+as+%3Fduree)+(SAMPLE+(%3Fdi)+as+%3Fdistance)+(SAMPLE+(%3Fdev)+AS+%3Fdenivele)%0AWHERE+%7B%0A++%3Frandonnee+rdf%3Atype+tm%3ARandonnee+.%0A++%3Frandonnee+tm%3Along+%3Flongitude+.%0A++%3Frandonnee+tm%3Alat+%3Flatitude+.%0A++%3Frandonnee+tm%3Aduree+%3Fd+.%0A++%3Frandonnee+tm%3Adistance+%3Fdi+.%0A++%3Frandonnee+tm%3Adenivele+%3Fdev+.%0A++FILTER+(%3Flongitude!%3D%220%22)%0A%7D%0AGROUP+BY+%3Frandonnee&format=json"
         $.ajax({url:queryTourismeUrl,success: function(result) {
             if ($("#tourisme").hasClass("checked")) {
                 result['results']['bindings'].forEach(element => {
@@ -53,6 +53,7 @@ $( document ).ready(function() {
                 }
                 tourismeMarkers = []
             }
+            mymap.setView([-21.117819, 55.521077], 10);
         }})
     })
 
@@ -68,7 +69,7 @@ $( document ).ready(function() {
     var santeMarkers = new Array();
     $("#sante").on('click',function () {
         $(this).toggleClass("checked")
-        querySanteURL="http://localhost:3030/test/sparql?query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rm%3A+%3Chttp%3A%2F%2Fjazz.net%2Fns%2Frm%23%3E%0Aprefix+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0Aprefix+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0Aprefix+tm%3A%3Chttp%3A%2F%2Fwww.thomasandmax.com%2F%3E%0A%0ASELECT+%3Fsubject+(SAMPLE+(%3Flong)+AS+%3Flongitude)++(SAMPLE+(%3Flat)+AS+%3Flatitude)+(SAMPLE+(%3Fadresse)+AS+%3Fadr)+(SAMPLE+(%3Fcategorie)+AS+%3Fcat)%0AWHERE+%7B%0A++%3Fsubject+rdf%3Atype+%3Fcategorie+.%0A++%3Fsubject+tm%3Along+%3Flong+.%0A++%3Fsubject+tm%3Alat+%3Flat+.%0A++%3Fsubject+tm%3AaAdresse+%3Fadresse+.%0A++FILTER+(%3Fcategorie+IN+(tm%3ACentres_Hospitaliers%2Ctm%3AEtablissements_d%5C'Hebergement_pour_Personnes_%C3%82gees%2Ctm%3ALaboratoires_de_Biologie_Medicale))%0A%7D%0AGROUP+BY+%3Fsubject+%3Fadresse%0ALIMIT+500&format=json"
+        querySanteURL="http://localhost:3030/reunion_island/sparql?query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rm%3A+%3Chttp%3A%2F%2Fjazz.net%2Fns%2Frm%23%3E%0Aprefix+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0Aprefix+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0Aprefix+tm%3A%3Chttp%3A%2F%2Fwww.thomasandmax.com%2F%3E%0A%0ASELECT+%3Fsubject+(SAMPLE+(%3Flong)+AS+%3Flongitude)++(SAMPLE+(%3Flat)+AS+%3Flatitude)+(SAMPLE+(%3Fadresse)+AS+%3Fadr)+(SAMPLE+(%3Fcategorie)+AS+%3Fcat)%0AWHERE+%7B%0A++%3Fsubject+rdf%3Atype+%3Fcategorie+.%0A++%3Fsubject+tm%3Along+%3Flong+.%0A++%3Fsubject+tm%3Alat+%3Flat+.%0A++%3Fsubject+tm%3AaAdresse+%3Fadresse+.%0A++FILTER+(%3Fcategorie+IN+(tm%3ACentres_Hospitaliers%2Ctm%3AEtablissements_d%5C'Hebergement_pour_Personnes_%C3%82gees%2Ctm%3ALaboratoires_de_Biologie_Medicale))%0A%7D%0AGROUP+BY+%3Fsubject+%3Fadresse%0ALIMIT+500&format=json"
         $.ajax({url:querySanteURL,success: function(result) {
             if ($("#sante").hasClass("checked")) {
                 result['results']['bindings'].forEach(element => {
@@ -87,6 +88,7 @@ $( document ).ready(function() {
                 santeMarkers = []
             }
         },async:false})
+        mymap.setView([-21.117819, 55.521077], 10);
     })
 
     var yellowIcon = new L.Icon({
@@ -110,7 +112,7 @@ $( document ).ready(function() {
     var transportMarkers = new Array();
     $("#transport").on('click',function () {
         $(this).toggleClass("checked")
-        queryTransportURL="http://localhost:3030/test/sparql?query=%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX+tm%3A+%3Chttp%3A%2F%2Fwww.thomasandmax.com%2F%3E%0A%0A%0ASELECT+%3Fsubject+(SAMPLE+(%3Flat)+AS+%3Flatitude)++(SAMPLE+(%3Flong)+AS+%3Flongitude)%0AWHERE+%7B%0A++%3Fsubject+rdf%3Atype+tm%3AStopCarJaune+.%0A++%3Fsubject+tm%3Along+%3Flong+.%0A++%3Fsubject+tm%3Alat+%3Flat+.%0A%7D%0AGROUP+BY+%3Fsubject&format=json"
+        queryTransportURL="http://localhost:3030/reunion_island/sparql?query=%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX+tm%3A+%3Chttp%3A%2F%2Fwww.thomasandmax.com%2F%3E%0A%0A%0ASELECT+%3Fsubject+(SAMPLE+(%3Flat)+AS+%3Flatitude)++(SAMPLE+(%3Flong)+AS+%3Flongitude)%0AWHERE+%7B%0A++%3Fsubject+rdf%3Atype+tm%3AStopCarJaune+.%0A++%3Fsubject+tm%3Along+%3Flong+.%0A++%3Fsubject+tm%3Alat+%3Flat+.%0A%7D%0AGROUP+BY+%3Fsubject&format=json"
         $.ajax({url:queryTransportURL,success: function(result) {
             if ($("#transport").hasClass("checked")) {
                 result['results']['bindings'].forEach(element => {
@@ -127,13 +129,14 @@ $( document ).ready(function() {
                 transportMarkers = []
             }
         },async:false})
+        mymap.setView([-21.117819, 55.521077], 10);
     })
 
     
     var remarquablePlace = new Array();
     $("#tourisme2").on('click',function () {
         $(this).toggleClass("checked")
-        queryRemarquablePlaceUrl="http://localhost:3030/test/sparql?query=%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX+tm%3A+%3Chttp%3A%2F%2Fwww.thomasandmax.com%2F%3E%0A%0A%0ASELECT+%3Flieu+(SAMPLE+(%3Flong)+as+%3Flongitude)+(SAMPLE+(%3Flat)+as+%3Flatitude)+(SAMPLE+(%3Facc)+as+%3Faccessibilite)%0AWHERE+%7B%0A++%3Flieu+rdf%3Atype+tm%3ALieuRemarquable+.%0A++%3Flieu+tm%3Along+%3Flong+.%0A++%3Flieu+tm%3Alat+%3Flat+.%0A++%3Flieu+tm%3AaccessibleMobiliteReduite+%3Facc+.%0A%7D%0AGROUP+BY+%3Flieu&format=json"
+        queryRemarquablePlaceUrl="http://localhost:3030/reunion_island/sparql?query=%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX+tm%3A+%3Chttp%3A%2F%2Fwww.thomasandmax.com%2F%3E%0A%0A%0ASELECT+%3Flieu+(SAMPLE+(%3Flong)+as+%3Flongitude)+(SAMPLE+(%3Flat)+as+%3Flatitude)+(SAMPLE+(%3Facc)+as+%3Faccessibilite)%0AWHERE+%7B%0A++%3Flieu+rdf%3Atype+tm%3ALieuRemarquable+.%0A++%3Flieu+tm%3Along+%3Flong+.%0A++%3Flieu+tm%3Alat+%3Flat+.%0A++%3Flieu+tm%3AaccessibleMobiliteReduite+%3Facc+.%0A%7D%0AGROUP+BY+%3Flieu&format=json"
         $.ajax({url:queryRemarquablePlaceUrl,success: function(result) {
             if ($("#tourisme2").hasClass("checked")) {
                 result['results']['bindings'].forEach(element => {
@@ -151,6 +154,7 @@ $( document ).ready(function() {
                 remarquablePlace = []
             }
         },async:false})
+        mymap.setView([-21.117819, 55.521077], 10);
     })
 });
 
