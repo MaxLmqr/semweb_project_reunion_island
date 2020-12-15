@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet"> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informations</title>
 </head>
 <body>
 
+    <div class = "wave-container">
+            <br/><t2>Reunion Island</t2><br/>
+            <t1>by Max and Thomas</t1>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"><path fill="#fff" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,192C384,192,480,160,576,133.3C672,107,768,85,864,106.7C960,128,1056,192,1152,197.3C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+
 
     <h1>Randonnées</h1>
-    <p>Pour ajouter des données correspondants à des randonnées, vous devez posséder les informations suivantes :</p>
+    <p>Pour ajouter des données correspondant à des randonnées, vous devez posséder les informations suivantes :</p>
     <ul>
         <li>Nom de la randonnée</li>
         <li>Durée de la randonnée, en minutes</li>
@@ -19,12 +28,12 @@
     </ul>
     <p>En effet, notre triplestore contient ces informations,
         et pour chaque randonnée nous créons un marqueur qui indique le point de départ de la randonnée avec les informations
-        précisée ci-dessus.
+        précisées ci-dessus.
     </p>
 
 
     <h1>Lieux remarquables</h1>
-    <p>Pour ajouter des données correspondants à des lieux remarquables, vous devez posséder les informations suivantes :</p>
+    <p>Pour ajouter des données correspondant à des lieux remarquables, vous devez posséder les informations suivantes :</p>
     <ul>
         <li>Nom du lieu remarquable</li>
         <li>L'existence d'une accessibilité pour les personnes à mobilité réduite (avec 'Oui' ou 'Non')</li>
@@ -33,13 +42,17 @@
 
 
     <h1>Santé</h1>
-    <p>Pour ajouter des données correspondants à des établissements de santé, l'établissement doit appartenir à une des catégories suivantes :</p>
+    <p>Pour ajouter des données correspondant à des établissements de santé, il faut préciser le type d'établissement. <br/><br/>
+    Trois catégories sont déjà définies :</p>
     <ul>
         <li>Laboratoires de biologie médicale</li>
         <li>Etablissements d'Hebergement pour Personnes Âgees</li>
         <li>Centres Hospitaliers</li>
     </ul>
-    <p>Les informations doivent donc contenir la catégorie à laquelle il appartient, ainsi que les informations suivantes :</p>
+
+    <p> Si les entités à créer n'appartiennent pas à l'une de ces catégories on crée une sous classe de 'EtablissementSante' correspondant à la catégorie de l'établissement.</p>
+
+    <p> Une fois le type d'établissement spécifié, on fournit les informations suivantes :</p>
     <ul>
         <li>Nom de l'établissement</li>
         <li>Adresse de l'établissement</li>
@@ -55,12 +68,24 @@
 
 
     <h1>Transports</h1>
-    <p>La catégorie transports corresponds aux arrêts bus à la Réunion. Il n'y a en effet pas pour le moment de 
-        réseau ferroviaire, ou de métro. Les données sont donc des arrêts bus, qui nécessitent les informations suivantes :
+    <p>La catégorie transports correspond aux arrêts de bus à la Réunion. Il n'y a en effet pas pour le moment de 
+        réseau ferroviaire, ou de métro. Les données sont donc des arrêts de bus, entités de la classe StopCarJaune, qui nécessitent les informations suivantes :
     </p>
     <ul>
         <li>Nom de l'arrêt'</li>
         <li>Coordonnées GPS de celui-ci (latitude et longitude)</li>
     </ul>
+
+    <p> Si un nouveau mode de transport est développé, il sera possible de créer une sous-classe de la classe ArretTransport, puis d'y ajouter des entités. </p>
+
+    <div class = "bottom">
+        <div class="link"><br/><br/>
+        <a href="index.html">Retourner à la carte</a><br/><br/>
+        </div>
+        <br/>
+        <h2>Contactez nous !</h2>
+        <a target="_blank" href="https://www.linkedin.com/in/max-lemasquerier-a70a31175/">Max le boss</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="https://www.linkedin.com/in/thomas-de-lard/31175/">Thomas</a><br/><br/>
+    </div>
 </body>
 </html>
