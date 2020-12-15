@@ -1,0 +1,44 @@
+Durée totale;Coordonnées géographiques;Type;Type de randonnée;Classification;Identifiant interne;Nom de la randonnée;Niveau de difficulté;Distance;Dénivelé min;Dénivelé max;Altitude min;Altitude max;Source .kml;Ouvert ?;Zone touristique
+180;-21.048778,55.454421;circuit;pied;;14;Canalisation Augustave-Aurère;4;6.01;846;217;914;1545;canalisation-augustave-aurere.kml;Oui;Cirque de Mafate
+105;-20.982037,55.376151;circuit;pied;;19;Dos d'Ane - Deux-Bras;5;4.47;897;240;268;932;dos-d-ane-deux-bras.kml;Oui;Cirque de Mafate
+120;-21.070224,55.52065;circuit;pied;;41;Hell bourg - Source Manouilh;3;3.9;158;467;1003;1334;hell-bourg-source-manouilh.kml;Oui;Cirque de Salazie
+240;-21.060468,55.536668;circuit;pied;;8;Gîte de Bélouve-Trou de Fer;2;8.58;270;270;1315;1505;gite-de-belouve-trou-de-fer.kml;Oui;Cirque de Salazie
+275;;circuit;pied;"GR R3;GR R3;GR R3;GR R1;GR R3;GR R1;GR R3;GR R1;GR R1;GR R1;GR R1;GR R1;GR R1;GR R1;GR R1;GR R1;GR R1;GR R1;GR R3;GR R1;GR R3;GR R3;GR R3";9;Col des Boeufs - La Nouvelle;2;11.4;634;618;1440;1841;col-des-boeufs-la-nouvelle.kml;Oui;Cirque de Mafate
+315;-21.225209,55.684992;circuit;pied;;10;Piton de la Fournaise (Pas de Bellecombe-Cratère Dolomieu);4;11.0;488;488;2355;2478;piton-de-la-fournaise-pas-de-bellecombe-cratere-dolomieu.kml;Oui;Plaines et volcan
+265;-21.076325,55.424419;circuit;pied;;21;La Nouvelle - Trois Roches - Roche Plate;4;8.02;724;382;503;1428;la-nouvelle-trois-roches-roche-plate.kml;Oui;Cirque de Mafate
+90;-21.071966,55.509951;circuit;pied;;42;Ilet à Vidot- Source Manouilh;2;2.87;159;410;1074;1468;ilet-a-vidot-source-manouilh.kml;Oui;Cirque de Salazie
+350;;circuit;pied;"GR R3;GR R3;GR R2;GR R3;GR R2;GR R3;GR R2;GR R3;GR R2;GR R3;GR R2;GR R3;GR R2;GR R3;GR R3;GR R3";2;Ilet à Malheur par Sentier Scout;3;14.36;947;955;900;1647;ilet-a-malheur-par-sentier-scout.kml;Oui;Cirque de Mafate
+275;;circuit;pied;;15;Cascade Bras-Rouge;3;11.28;710;711;928;1193;cascade-bras-rouge.kml;Oui;Cirque de Cilaos
+360;-21.117746,55.450103;circuit;pied;"GR R1;GR R2;GR R1;GR R2;GR R2;GR R1;GR R2;GR R1;GR R2;GR R1;GR R2;GR R1;GR R2;GR R1;GR R2;GR R1;GR R2;GR R1;GR R2;GR R1";7;Cilaos - Marla;4;11.47;1175;1161;1259;1621;cilaos-marla.kml;Oui;Cirque de Mafate
+270;-21.014961,55.461095;circuit;pied;;24;Roche Ecrite - Grand-Ilet;4;4.14;1255;150;1138;2240;roche-ecrite-grand-ilet.kml;Oui;Cirque de Salazie
+120;-20.897346,55.455287;circuit;pied;;26;La Providence;3;5.28;35;774;62;812;la-providence.kml;Oui;Nord
+360;-21.190611,55.713163;circuit;pied;;40;Grand Ilet - Hell Bourg;4;9.89;850;576;699;1230;grand-ilet-hell-bourg.kml;Oui;Cirque de Salazie
+660;-21.106417,55.630123;circuit;"pied;cheval";"PR;Sentier botanique";12;Grand etang (saisi par melanie);4;7.4;0;0;0;0;grand-etang-saisi-par-melanie.kml;Oui;Est
+300;-21.185372,55.433158;circuit;pied;;30;Les Makes;2;4.78;459;298;1210;1549;les-makes.kml;Oui;Sud
+320;;circuit;pied;;32;Maïdo - Roche-Plate;3;10.03;991;989;1080;2018;maido-roche-plate.kml;Oui;Cirque de Mafate
+270;;circuit;pied;;34;Gite de Belouve - Gite du Piton des Neiges;4;8.48;41;1010;1507;2479;gite-de-belouve-gite-du-piton-des-neiges.kml;Oui;Piton des Neiges
+480;;circuit;pied;;4;Le Chemin des Anglais (La Possession);3;18.79;1020;976;63;417;le-chemin-des-anglais-la-possession.kml;Oui;Ouest
+280;;circuit;pied;;6;Grand Bassin;3;9.97;997;995;627;1358;grand-bassin.kml;Oui;Sud
+185;-21.068042,55.39911;circuit;pied;;20;Roche Plate - Cayenne;4;7.15;823;268;517;1173;roche-plate-cayenne.kml;Oui;Cirque de Mafate
+235;-21.069779,55.520817;circuit;pied;;35;Hell Bourg - Cap Anglais - Gite du Piton Des Neiges;5;6.79;0;1447;1003;2479;hell-bourg-cap-anglais-gite-du-piton-des-neiges.kml;Oui;Piton des Neiges
+450;-21.235802,55.460731;circuit;pied;;38;Dimitile par sentier Bayonne;5;9.84;231;1465;502;1795;dimitile-par-sentier-bayonne.kml;Oui;Sud
+120;-21.065449,55.524943;circuit;pied;;43;Hell Bourg - Bélouve;3;3.16;572;46;981;1511;hell-bourg-belouve.kml;Oui;Cirque de Salazie
+440;;circuit;pied;"GR R2;GR R2;GR R2;GR R2;GR R2;GR R2;GR R2;GR R2;GR R2;GR R2;GR R2;GR R2;GR R2;GR R2;GR R2;GR R2;GR R2";1;La Roche Ecrite depuis Mamode Camp;4;18.54;1028;1018;1202;2270;la-roche-ecrite-depuis-mamode-camp.kml;Oui;Nord
+500;-20.979122,55.347151;circuit;pied;"GR R3;GR R2;GR R3;GR R2";13;Canalisation des Orangers;3;27.75;1641;1597;532;1022;canalisation-des-orangers.kml;Oui;Cirque de Mafate
+270;-21.096752,55.653387;circuit;pied;;16;Grand Etang;2;8.03;582;582;524;788;grand-etang.kml;Oui;Plaines et volcan
+165;-21.217461,55.686237;circuit;pied;;39;Cassé de la rivière de l'Est;3;7.74;515;0;1719;2245;casse-de-la-riviere-de-l-est.kml;Oui;Plaines et volcan
+186;-21.006814,55.460492;circuit;"pied;VTT";GR R2;11;Roche écrite (saisi par melanie);2;0.0;0;0;0;0;roche-ecrite-saisi-par-melanie.kml;Oui;Nord
+140;;circuit;pied;"GR R3;GR R3;GR R3;GR R1;GR R3;GR R1;GR R3;GR R2;GR R1";17;Col des Bœufs - Marla;2;7.22;544;323;1482;1962;col-des-boeufs-marla.kml;Oui;Cirque de Mafate
+90;-21.355468,55.739713;circuit;pied;Sentier botanique;23;Foret de Mare Longue;1;1.9;102;112;204;302;foret-de-mare-longue.kml;Oui;Sud
+240;-20.935679,55.467437;circuit;pied;;22;Pic d'Adam;3;6.49;646;664;714;1224;pic-d-adam.kml;Oui;Nord
+180;-21.057289,55.501424;circuit;pied;;25;Piton d'Anchaing;3;3.85;161;716;754;1336;piton-d-anchaing.kml;Oui;Cirque de Salazie
+325;;circuit;pied;;29;Aurere - Deux-Bras;3;12.88;729;713;266;947;aurere-deux-bras.kml;Oui;Cirque de Mafate
+360;;circuit;pied;;5;Maïdo-Grand Bénare;4;15.42;764;746;2173;2878;maido-grand-benare.kml;Oui;Ouest
+360;-21.123526,55.483202;circuit;pied;;33;Cilaos - Piton Des Neiges;5;7.32;42;1596;1392;3070;cilaos-piton-des-neiges.kml;Oui;Piton des Neiges
+120;-20.988999,55.386831;circuit;pied;;27;Dos d'Ane - Cap Noir;3;2.86;469;471;902;1192;dos-d-ane-cap-noir.kml;Oui;Ouest
+135;-21.225659,55.685234;circuit;pied;;36;Pas de Bellecombe - Nez Coupé de Sainte-Rose;3;4.85;440;107;2015;2328;pas-de-bellecombe-nez-coupe-de-sainte-rose.kml;Oui;Plaines et volcan
+300;;circuit;pied;;18;Deux Bras - Cayenne;2;12.74;755;754;252;574;deux-bras-cayenne.kml;Oui;Cirque de Mafate
+180;-21.021738,55.364211;circuit;pied;;28;Ilet-Alcide;2;7.1;415;415;1332;1553;ilet-alcide.kml;Oui;Ouest
+420;;circuit;pied;;3;Nez de Boeuf-Roche Plate (rivière des remparts);4;15.23;1292;1296;755;2044;nez-de-boeuf-roche-plate-riviere-des-remparts.kml;Oui;Sud
+105;-21.07498,55.683183;circuit;pied;;31;Les Ravenales;2;2.28;133;178;272;374;les-ravenales.kml;Oui;Est
+300;-21.117779,55.450033;circuit;pied;;37;Cap Bouteille;4;3.89;43;702;1256;1915;cap-bouteille.kml;Oui;Cirque de Cilaos

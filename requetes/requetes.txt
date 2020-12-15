@@ -1,0 +1,74 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix tm:<http://www.thomasandmax.com/>
+
+SELECT ?subject (SAMPLE (?long) AS ?longitude)  (SAMPLE (?lat) AS ?latitude) (SAMPLE (?adresse) AS ?adr) (SAMPLE (?categorie) AS ?cat)
+WHERE {
+  ?subject rdf:type ?categorie .
+  ?subject tm:long ?long .
+  ?subject tm:lat ?lat .
+  ?subject tm:aAdresse ?adresse .
+  FILTER (?categorie IN (tm:Centres_Hospitaliers,tm:Etablissements_d\'Hebergement_pour_Personnes_Âgees,tm:Laboratoires_de_Biologie_Medicale))
+}
+GROUP BY ?subject ?adresse
+LIMIT 500
+
+
+
+
+
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX tm: <http://www.thomasandmax.com/>
+
+
+SELECT ?subject (SAMPLE (?lat) AS ?latitude)  (SAMPLE (?long) AS ?longitude)
+WHERE {
+  ?subject rdf:type tm:StopCarJaune .
+  ?subject tm:long ?long .
+  ?subject tm:lat ?lat .
+}
+GROUP BY ?subject
+
+
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX tm: <http://www.thomasandmax.com/>
+
+
+SELECT ?lieu (SAMPLE (?long) as ?longitude) (SAMPLE (?lat) as ?latitude) (SAMPLE (?acc) as ?accessibilite)
+WHERE {
+  ?lieu rdf:type tm:LieuRemarquable .
+  ?lieu tm:long ?long .
+  ?lieu tm:lat ?lat .
+  ?lieu tm:accessibleMobiliteReduite ?acc .
+}
+GROUP BY ?lieu
+
+
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX tm: <http://www.thomasandmax.com/>
+
+
+SELECT ?randonnee (SAMPLE (?longitude) as ?long) (SAMPLE (?latitude) as ?lat) (SAMPLE (?d) as ?duree) (SAMPLE (?di) as ?distance) (SAMPLE (?dev) AS ?denivele)
+WHERE {
+  ?randonnee rdf:type tm:Randonnee .
+  ?randonnee tm:long ?longitude .
+  ?randonnee tm:lat ?latitude .
+  ?randonnee tm:duree ?d .
+  ?randonnee tm:distance ?di .
+  ?randonnee tm:denivele ?dev .
+  FILTER (?longitude!="0")
+}
+GROUP BY ?randonnee
