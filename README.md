@@ -2,11 +2,11 @@
 
 ## Description des dossiers
 
-**dataFiles** : Contient les fichiers csv qui vont remplir notre base de données (triplestore Jena)
-**ontologie** : Contient un fichier .owl qui peut-être lu dans protégé et qui décrit notre ontologie
-**requetes** : Contient un fichier texte qui représente les requêtes SPARQL que nous exécutons sur notre site web lorsque nous voulons afficher certaines informations.
-**semweb** : Projet Maven que nous avons créé avec ECLIPSE, qui permet de charger les csv de **dataFiles** dans le triplestore JENA. Notez qu'il faut modifier les chemins d'accès à ces fichiers selon le chemin où vous avez cloné le repository.
-Il est également nécessaire d'avoir une base de données créé sur Jena avec le nom **reunion_island**.
+**dataFiles** : Contient les fichiers csv qui vont remplir notre base de données (triplestore Jena)  
+**ontologie** : Contient un fichier .owl qui peut-être lu dans protégé et qui décrit notre ontologie  
+**requetes** : Contient un fichier texte qui représente les requêtes SPARQL que nous exécutons sur notre site web lorsque nous voulons afficher certaines informations.  
+**semweb** : Projet Maven que nous avons créé avec ECLIPSE, qui permet de charger les csv de **dataFiles** dans le triplestore JENA. Notez qu'il faut modifier les chemins d'accès à ces fichiers selon le chemin où vous avez cloné le repository.  
+Il est également nécessaire d'avoir une base de données créé sur Jena avec le nom **reunion_island**.  
 **Website** : Contient le html, css et javascript qui permet de faire tourner le site web.
 Si vous rencontrez une erreur CORS, utilisez Apache et placez le contenu de ce dossier dans le dossier www d'Apache (/var/www/html/ pour Linux)
 
