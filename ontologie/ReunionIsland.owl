@@ -184,7 +184,8 @@ Les établissements sont des lieux qui peuvent être assignés à une adresse.""
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#LieuRemarquable
 :LieuRemarquable rdf:type owl:Class ;
                  rdfs:subClassOf :LieuTourisme ;
-                 rdfs:comment "Regroupe l'ensembles des lieux dits \"remarquables\"."@fr .
+                 rdfs:comment """Regroupe l'ensembles des lieux dits \"remarquables\".
+Il peut s'agir de forêts, de mosquées, de plages, de mares, etc."""@fr .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#LieuTourisme
