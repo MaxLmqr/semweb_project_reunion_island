@@ -66,7 +66,7 @@ above the local reference ellipsoid).""" ;
           owl:inverseOf :aLieu ;
           rdfs:domain :Etablissement ,
                       :LieuTourisme ;
-          rdfs:comment "Relie un lieu à une commune" .
+          rdfs:comment "Relie un lieu à une commune." .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#aLieu
@@ -74,7 +74,7 @@ above the local reference ellipsoid).""" ;
        rdfs:domain :Commune ;
        rdfs:range :Etablissement ,
                   :LieuTourisme ;
-       rdfs:comment "Relie une commune à un des lieux présents dans cette commune" .
+       rdfs:comment "Relie une commune à un des lieux présents dans cette commune." .
 
 
 #################################################################
@@ -85,7 +85,7 @@ above the local reference ellipsoid).""" ;
 :aAdresse rdf:type owl:DatatypeProperty ;
           rdfs:domain :Etablissement ;
           rdfs:range xsd:string ;
-          rdfs:comment "Relie un établissement à son adresse" .
+          rdfs:comment "Relie un établissement à son adresse." .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#aCodePostal
@@ -93,28 +93,28 @@ above the local reference ellipsoid).""" ;
              rdfs:domain :Commune ,
                          :Etablissement ;
              rdfs:range xsd:integer ;
-             rdfs:comment "Relie un lieu à son code postal" .
+             rdfs:comment "Relie un lieu à son code postal." .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#aDenivele
 :aDenivele rdf:type owl:DatatypeProperty ;
            rdfs:domain :Randonnee ;
            rdfs:range xsd:double ;
-           rdfs:comment "Indique le dénivelé d'une randonnée" .
+           rdfs:comment "Indique le dénivelé d'une randonnée." .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#aDistance
 :aDistance rdf:type owl:DatatypeProperty ;
            rdfs:domain :Randonnee ;
            rdfs:range xsd:double ;
-           rdfs:comment "Indique la distance à parcourir pour réaliser une randonnée" .
+           rdfs:comment "Indique la distance à parcourir pour réaliser une randonnée." .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#aDuree
 :aDuree rdf:type owl:DatatypeProperty ;
         rdfs:domain :Randonnee ;
         rdfs:range xsd:integer ;
-        rdfs:comment "Indique la durée estimée d'une randonnée" .
+        rdfs:comment "Indique la durée estimée d'une randonnée." .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#accessibleMobiliteReduite
@@ -122,21 +122,21 @@ above the local reference ellipsoid).""" ;
                            rdfs:domain :LieuRemarquable ;
                            rdfs:range xsd:string ;
                            rdfs:comment """Précise si un lieu est accessible aux personnes à mobilité réduite.
-A l'heure actuelle, nous ne connaissons cette information que pour les éléments de la classe LieuRemarquable""" .
+A l'heure actuelle, nous ne connaissons cette information que pour les éléments de la classe LieuRemarquable.""" .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#lat
 :lat rdf:type owl:DatatypeProperty ;
      rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
      rdfs:range xsd:double ;
-     rdfs:comment "Précise la latitude d'un élément de la classe SpatialThing" .
+     rdfs:comment "Précise la latitude d'un élément de la classe SpatialThing." .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#long
 :long rdf:type owl:DatatypeProperty ;
       rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
       rdfs:range xsd:double ;
-      rdfs:comment "Précise la longitude d'un élément de la classe SpatialThing" .
+      rdfs:comment "Précise la longitude d'un élément de la classe SpatialThing." .
 
 
 #################################################################
@@ -159,7 +159,7 @@ Il peut s'agir de centres hospitaliers réionaux, universitaires, ..."""@fr .
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#Commune
 :Commune rdf:type owl:Class ;
          rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
-         rdfs:comment "Regroupe l'ensemble des communes"@fr .
+         rdfs:comment "Regroupe l'ensemble des communes."@fr .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#Etablissement
@@ -172,13 +172,13 @@ Les établissements sont des lieux qui peuvent être assignés à une adresse.""
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#EtablissementSante
 :EtablissementSante rdf:type owl:Class ;
                     rdfs:subClassOf :Etablissement ;
-                    rdfs:comment "Regroupe l'ensemble des établissements de santé de la Réunion"@fr .
+                    rdfs:comment "Regroupe l'ensemble des établissements de santé de la Réunion."@fr .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#Laboratoires_de_Biologie_Medicale
 :Laboratoires_de_Biologie_Medicale rdf:type owl:Class ;
                                    rdfs:subClassOf :EtablissementSante ;
-                                   rdfs:comment "Regroupe les laboratoires de biologie médicales de l'île de la Réunion"@fr .
+                                   rdfs:comment "Regroupe les laboratoires de biologie médicales de l'île de la Réunion."@fr .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#LieuRemarquable
@@ -198,24 +198,24 @@ Il peut s'agir de randonnées, de plages, de volcans, ..."""@fr .
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#Randonnee
 :Randonnee rdf:type owl:Class ;
            rdfs:subClassOf :LieuTourisme ;
-           rdfs:comment "Regroupe l'ensemble des circuits de randonnée de la Réunion"@fr .
+           rdfs:comment "Regroupe l'ensemble des circuits de randonnée de la Réunion."@fr .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#StopCarJaune
 :StopCarJaune rdf:type owl:Class ;
               rdfs:subClassOf :ArretTransport ;
-              rdfs:comment "Regroupe les arrêt de car jaune de l'Ile de la Réunion."@fr .
+              rdfs:comment "Regroupe les arrêts de car jaune de l'Ile de la Réunion."@fr .
 
 
 ###  http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#Etablissements_d'Hebergement_pour_Personnes_Âgees
 <http://www.semanticweb.org/thoma/ontologies/2020/10/untitled-ontology-19#Etablissements_d'Hebergement_pour_Personnes_Âgees> rdf:type owl:Class ;
                                                                                                                              rdfs:subClassOf :EtablissementSante ;
-                                                                                                                             rdfs:comment "Regroupe l'ensemble des Ehpad de l'ile de la Réunion"@fr .
+                                                                                                                             rdfs:comment "Regroupe l'ensemble des Ehpad de l'ile de la Réunion."@fr .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class ;
-                                                       rdfs:comment "Regroupe l'ensemble des éléments que l'on peut placer sur une carte"@fr ;
+                                                       rdfs:comment "Regroupe l'ensemble des éléments que l'on peut placer sur une carte."@fr ;
                                                        rdfs:label "SpatialThing" .
 
 
